@@ -25,7 +25,7 @@ SECRET_KEY = '5h-o$1o$4fi$8ih3kd8$id0$ra9py3mwfr$p$w&8)a9f!#&l22'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["ygessen.pythonanywhere.com"]
 
 
 # Application definition
