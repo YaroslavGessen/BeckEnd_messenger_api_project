@@ -31,7 +31,7 @@ class MessegeViewSet(viewsets.ModelViewSet, TokenAuthentication):
     @action(detail=False)
     def unread(self, request,*args, **kwargs):
         queryset = self.filter_queryset(self.get_queryset())
-        queryset = queryset.filter(sender=request.user,is_read=False)
+        queryset = queryset.filter(recipient=request.user,is_read=False)
         if not queryset:
             return Response({"Answer": "You don't have unread messages"}, status=status.HTTP_200_OK)
         serializer = self.get_serializer(queryset, many=True)

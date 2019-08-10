@@ -25,22 +25,20 @@
 					"raw": "{\n\t\"username\": \"test2\",\n\t\"password\": \"Aa112233\"\n\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/api-token-auth/",
+					"raw": "http://ygessen.pythonanywhere.com/api/api-token-auth/",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"ygessen",
+						"pythonanywhere",
+						"com"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"api-token-auth",
 						""
 					]
 				},
-				"description": "authentication of user. Token Based"
+				"description": "Authentication of user, checking if user is in Data base, if yes, output will be Token Authentication, if not get ERORR description.\nToken Based"
 			},
 			"response": []
 		},
@@ -59,22 +57,20 @@
 					}
 				],
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/message/",
+					"raw": "http://ygessen.pythonanywhere.com/api/message/",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"ygessen",
+						"pythonanywhere",
+						"com"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"message",
 						""
 					]
 				},
-				"description": "Get All messgase (sender=User or recipient=User)"
+				"description": "Get All messages for specific User.(sender=User or recipient=User)"
 			},
 			"response": []
 		},
@@ -93,15 +89,13 @@
 					}
 				],
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/message/unread/",
+					"raw": "http://ygessen.pythonanywhere.com/api/message/unread/",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"ygessen",
+						"pythonanywhere",
+						"com"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"message",
@@ -109,7 +103,7 @@
 						""
 					]
 				},
-				"description": "Get All Unread Messages "
+				"description": "Get All Unread Messages for specific user."
 			},
 			"response": []
 		},
@@ -125,15 +119,13 @@
 					}
 				],
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/message/9/read/",
+					"raw": "http://ygessen.pythonanywhere.com/api/message/9/read/",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"ygessen",
+						"pythonanywhere",
+						"com"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"message",
@@ -142,7 +134,7 @@
 						""
 					]
 				},
-				"description": "Read Message if sender is user and is_read is Falls changes to True "
+				"description": "Read Message if sender is user and is_read is Falls, changes is_read to True "
 			},
 			"response": []
 		},
@@ -168,15 +160,13 @@
 					"raw": "{\n\t\"subject\": \"test4\",\n\t\"recipient\": \"4\",\n\t\"message\": \"Test1\"\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/message/",
+					"raw": "http://ygessen.pythonanywhere.com/api/message/",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"ygessen",
+						"pythonanywhere",
+						"com"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"message",
@@ -199,15 +189,13 @@
 					}
 				],
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/message/13/",
+					"raw": "http://ygessen.pythonanywhere.com/api/message/13/",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"ygessen",
+						"pythonanywhere",
+						"com"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"message",
@@ -215,7 +203,7 @@
 						""
 					]
 				},
-				"description": "Delete message as logged user"
+				"description": "Delete specific message as logged user."
 			},
 			"response": []
 		}
