@@ -1,0 +1,223 @@
+{
+	"info": {
+		"_postman_id": "2e50bdf9-213f-47c9-8afc-26b18d1fba3d",
+		"name": "TestForAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "authentication ",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"test2\",\n\t\"password\": \"Aa112233\"\n\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/api-token-auth/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"api-token-auth",
+						""
+					]
+				},
+				"description": "authentication of user. Token Based"
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllMessages",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 308157cbe618debad8c23ca0a47f6b04720fd40f",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/message/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"message",
+						""
+					]
+				},
+				"description": "Get All messgase (sender=User or recipient=User)"
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllUnread",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 308157cbe618debad8c23ca0a47f6b04720fd40f",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/message/unread/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"message",
+						"unread",
+						""
+					]
+				},
+				"description": "Get All Unread Messages "
+			},
+			"response": []
+		},
+		{
+			"name": "ReadMessage ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 308157cbe618debad8c23ca0a47f6b04720fd40f",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/message/9/read/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"message",
+						"9",
+						"read",
+						""
+					]
+				},
+				"description": "Read Message if sender is user and is_read is Falls changes to True "
+			},
+			"response": []
+		},
+		{
+			"name": "CreateMessage",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 308157cbe618debad8c23ca0a47f6b04720fd40f",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"subject\": \"test4\",\n\t\"recipient\": \"4\",\n\t\"message\": \"Test1\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/message/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"message",
+						""
+					]
+				},
+				"description": "Creating New Message\nSender is logged.user "
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteMessage",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 308157cbe618debad8c23ca0a47f6b04720fd40f",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/message/13/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"message",
+						"13",
+						""
+					]
+				},
+				"description": "Delete message as logged user"
+			},
+			"response": []
+		}
+	]
+}
