@@ -3,7 +3,7 @@ from .models import *
 
 
 class MessageAdmin(admin.ModelAdmin):
-    list_display = ['id', 'subject', 'sent_at', 'sender', 'recipient', 'is_read', 'message',]
+    list_display = ['id', 'subject','sender', 'recipient', 'is_read', 'message',]
     list_display_links = ['id']
 
     search_fields = ['recipient']
