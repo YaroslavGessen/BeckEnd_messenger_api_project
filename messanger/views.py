@@ -50,7 +50,7 @@ class MessegeViewSet(viewsets.ModelViewSet, TokenAuthentication):
 
     def list(self, request, *args, **kwargs):
         queryset = self.filter_queryset(self.get_queryset())
-        queryset = queryset.filter(sender=request.user)
+        queryset = queryset.filter(recipient=request.user)
         serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.data)
 
