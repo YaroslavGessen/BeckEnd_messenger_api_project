@@ -7,6 +7,6 @@ class MessageAdmin(admin.ModelAdmin):
     list_display_links = ['id']
 
     search_fields = ['recipient']
-    fields = ['recipient','subject','message','is_read']
+    fields = ['sender','recipient','subject','message','is_read']
 
 admin.site.register(Message, MessageAdmin)
